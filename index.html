@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pâtisserie Royale</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f7f0df;
+            color: #272522;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        /* CABEÇALHO */
+        header {
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+            background:
+                linear-gradient(rgba(35, 33, 30, 0.76), rgba(35, 33, 30, 0.76)),
+                url("https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1800&q=85")
+                center/cover;
+        }
+
+        .hero {
+            max-width: 850px;
+        }
+
+        .crown {
+            color: #d2a84c;
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(4rem, 10vw, 8rem);
+            font-weight: 600;
+            color: #f4e5bd;
+            letter-spacing: 4px;
+        }
+
+        .subtitle {
+            margin-top: 10px;
+            color: #d2a84c;
+            font-size: 14px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            margin: 30px auto 0;
+            max-width: 650px;
+            color: #f5f1e8;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* INTRODUÇÃO */
+        .intro {
+            text-align: center;
+            padding: 80px 20px 50px;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .intro h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 48px;
+            color: #292723;
+            margin-bottom: 20px;
+        }
+
+        .gold-line {
+            width: 80px;
+            height: 2px;
+            background: #c7a04a;
+            margin: 0 auto 25px;
+        }
+
+        .intro p {
+            line-height: 1.9;
+            color: #655f56;
+        }
+
+        /* DOCES */
+        .collection {
+            padding: 30px 5% 100px;
+        }
+
+        .desserts {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+            max-width: 1500px;
+            margin: auto;
+        }
+
+        .card {
+            background: #fffaf0;
+            border: 1px solid rgba(184, 145, 55, 0.35);
+            overflow: hidden;
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 18px 40px rgba(50, 43, 30, 0.16);
+        }
+
+        .card-image {
+            height: 310px;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.06);
+        }
+
+        .card-content {
+            padding: 28px 25px 32px;
+        }
+
+        .number {
+            color: #b58b32;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 18px;
+        }
+
+        .card h3 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 32px;
+            font-weight: 600;
+            margin: 7px 0 14px;
+            color: #2a2824;
+        }
+
+        .card p {
+            color: #69635a;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .meaning {
+            margin-top: 18px;
+            padding-top: 16px;
+            border-top: 1px solid #e2d6bd;
+            font-size: 13px;
+            color: #8a6a29;
+            line-height: 1.6;
+        }
+
+        .meaning strong {
+            color: #5d4920;
+        }
+
+        /* SEÇÃO FINAL */
+        .heritage {
+            background: #292723;
+            color: #f6edd8;
+            text-align: center;
+            padding: 90px 20px;
+        }
+
+        .heritage h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 50px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .heritage p {
+            max-width: 720px;
+            margin: auto;
+            line-height: 1.9;
+            color: #d8d0c0;
+        }
+
+        /* RODAPÉ */
+        footer {
+            background: #1d1c1a;
+            color: #a99f8c;
+            text-align: center;
+            padding: 25px;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        /* RESPONSIVIDADE */
+        @media (max-width: 1100px) {
+            .desserts {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 650px) {
+            header {
+                min-height: 65vh;
+            }
+
+            h1 {
+                font-size: 4rem;
+                letter-spacing: 2px;
+            }
+
+            .subtitle {
+                font-size: 11px;
+                letter-spacing: 3px;
+            }
+
+            .intro h2,
+            .heritage h2 {
+                font-size: 38px;
+            }
+
+            .desserts {
+                grid-template-columns: 1fr;
+            }
+
+            .card-image {
+                height: 280px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <header>
+        <div class="hero">
+            <div class="crown">♕</div>
+
+            <h1>Pâtisserie Royale</h1>
+
+            <div class="subtitle">
+                L'art de la pâtisserie française
+            </div>
+
+            <p>
+                Uma celebração da confeitaria clássica francesa,
+                onde tradição, delicadeza e elegância se encontram
+                em cada criação.
+            </p>
+        </div>
+    </header>
+
+
+    <!-- INTRODUÇÃO -->
+    <section class="intro">
+        <h2>Les Grandes Créations</h2>
+
+        <div class="gold-line"></div>
+
+        <p>
+            A pâtisserie francesa representa muito mais do que sobremesas:
+            ela traduz séculos de tradição, técnica e criatividade.
+            Conheça quatro clássicos que se tornaram símbolos da alta
+            confeitaria francesa.
+        </p>
+    </section>
+
+
+    <!-- COLEÇÃO -->
+    <section class="collection">
+
+        <div class="desserts">
+
+            <!-- CANELÉ -->
+            <article class="card">
+
+                <div class="card-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=85"
+                        alt="Canellé de Bordeaux">
+                </div>
+
+                <div class="card-content">
+
+                    <span class="number">01 — BORDEAUX</span>
+
+                    <h3>Canellé de Bordeaux</h3>
+
+                    <p>
+                        Pequeno doce tradicional de Bordeaux, conhecido
+                        por sua casca caramelizada e interior macio,
+                        aromatizado com baunilha e rum.
+                    </p>
+
+                    <div class="meaning">
+                        <strong>Representa:</strong>
+                        tradição regional, simplicidade refinada
+                        e a arte de transformar poucos ingredientes
+                        em uma experiência sofisticada.
+                    </div>
+
+                </div>
+            </article>
+
+
+            <!-- OPERA -->
+            <article class="card">
+
+                <div class="card-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=900&q=85"
+                        alt="Gâteau Opéra">
+                </div>
+
+                <div class="card-content">
+
+                    <span class="number">02 — PARIS</span>
+
+                    <h3>Gâteau Opéra</h3>
+
+                    <p>
+                        Um elegante entremets formado por camadas de
+                        biscuit Joconde, café, creme de manteiga,
+                        chocolate e uma fina cobertura.
+                    </p>
+
+                    <div class="meaning">
+                        <strong>Representa:</strong>
+                        precisão, equilíbrio e sofisticação,
+                        combinando os sabores intensos de café
+                        e chocolate em camadas harmoniosas.
+                    </div>
+
+                </div>
+            </article>
+
+
+            <!-- SAINT HONORE -->
+            <article class="card">
+
+                <div class="card-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=900&q=85"
+                        alt="Saint-Honoré">
+                </div>
+
+                <div class="card-content">
+
+                    <span class="number">03 — PARIS</span>
+
+                    <h3>Saint-Honoré</h3>
+
+                    <p>
+                        Uma criação clássica composta por uma base de
+                        massa, pequenos choux caramelizados e creme
+                        Chiboust ou chantilly.
+                    </p>
+
+                    <div class="meaning">
+                        <strong>Representa:</strong>
+                        a elegância da pâtisserie parisiense e a
+                        combinação entre técnica, textura e apresentação.
+                    </div>
+
+                </div>
+            </article>
+
+
+            <!-- TARTE -->
+            <article class="card">
+
+                <div class="card-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=900&q=85"
+                        alt="Tarte aux Fraises et Framboises">
+                </div>
+
+                <div class="card-content">
+
+                    <span class="number">04 — FRAISES</span>
+
+                    <h3>Tarte aux Fraises</h3>
+
+                    <p>
+                        Uma delicada torta francesa que combina massa
+                        sablée, creme pâtissière e frutas vermelhas,
+                        especialmente morangos e framboesas.
+                    </p>
+
+                    <div class="meaning">
+                        <strong>Representa:</strong>
+                        frescor, delicadeza e a valorização dos
+                        ingredientes naturais através de uma apresentação
+                        clássica e elegante.
+                    </div>
+
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+
+    <!-- HERANÇA -->
+    <section class="heritage">
+
+        <h2>L'Héritage Français</h2>
+
+        <p>
+            Na Pâtisserie Royale, cada doce conta uma história.
+            Do pequeno Canellé de Bordeaux às sofisticadas camadas
+            do Gâteau Opéra, a confeitaria francesa transforma
+            técnica e tradição em verdadeiras obras de arte.
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        PÂTISSERIE ROYALE · L'ART DE LA HAUTE PÂTISSERIE
+    </footer>
+
+</body>
+</html>
