@@ -6,10 +6,14 @@
 
     <title>Pâtisserie Royale</title>
 
+    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
 
     <style>
         * {
@@ -18,13 +22,20 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background: #f7f0df;
             color: #272522;
             font-family: "Montserrat", sans-serif;
         }
 
-        /* CABEÇALHO */
+        /* =========================
+           CABEÇALHO / HERO
+        ========================= */
+
         header {
             min-height: 75vh;
             display: flex;
@@ -32,8 +43,12 @@
             justify-content: center;
             text-align: center;
             padding: 60px 20px;
+
             background:
-                linear-gradient(rgba(35, 33, 30, 0.76), rgba(35, 33, 30, 0.76)),
+                linear-gradient(
+                    rgba(35, 33, 30, 0.76),
+                    rgba(35, 33, 30, 0.76)
+                ),
                 url("https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1800&q=85")
                 center/cover;
         }
@@ -54,10 +69,11 @@
             font-weight: 600;
             color: #f4e5bd;
             letter-spacing: 4px;
+            line-height: 0.95;
         }
 
         .subtitle {
-            margin-top: 10px;
+            margin-top: 18px;
             color: #d2a84c;
             font-size: 14px;
             letter-spacing: 5px;
@@ -72,7 +88,10 @@
             font-weight: 300;
         }
 
-        /* INTRODUÇÃO */
+        /* =========================
+           INTRODUÇÃO
+        ========================= */
+
         .intro {
             text-align: center;
             padding: 80px 20px 50px;
@@ -99,7 +118,10 @@
             color: #655f56;
         }
 
-        /* DOCES */
+        /* =========================
+           COLEÇÃO
+        ========================= */
+
         .collection {
             padding: 30px 5% 100px;
         }
@@ -116,7 +138,10 @@
             background: #fffaf0;
             border: 1px solid rgba(184, 145, 55, 0.35);
             overflow: hidden;
-            transition: transform 0.35s ease, box-shadow 0.35s ease;
+
+            transition:
+                transform 0.35s ease,
+                box-shadow 0.35s ease;
         }
 
         .card:hover {
@@ -127,12 +152,15 @@
         .card-image {
             height: 310px;
             overflow: hidden;
+            background: #e8ddc7;
         }
 
         .card-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: block;
+
             transition: transform 0.5s ease;
         }
 
@@ -177,7 +205,10 @@
             color: #5d4920;
         }
 
-        /* SEÇÃO FINAL */
+        /* =========================
+           SEÇÃO FINAL
+        ========================= */
+
         .heritage {
             background: #292723;
             color: #f6edd8;
@@ -199,7 +230,10 @@
             color: #d8d0c0;
         }
 
-        /* RODAPÉ */
+        /* =========================
+           RODAPÉ
+        ========================= */
+
         footer {
             background: #1d1c1a;
             color: #a99f8c;
@@ -209,7 +243,10 @@
             letter-spacing: 1px;
         }
 
-        /* RESPONSIVIDADE */
+        /* =========================
+           RESPONSIVIDADE
+        ========================= */
+
         @media (max-width: 1100px) {
             .desserts {
                 grid-template-columns: repeat(2, 1fr);
@@ -217,6 +254,7 @@
         }
 
         @media (max-width: 650px) {
+
             header {
                 min-height: 65vh;
             }
@@ -249,9 +287,14 @@
 
 <body>
 
-    <!-- HERO -->
+    <!-- =========================
+         HERO
+    ========================= -->
+
     <header>
+
         <div class="hero">
+
             <div class="crown">♕</div>
 
             <h1>Pâtisserie Royale</h1>
@@ -265,12 +308,18 @@
                 onde tradição, delicadeza e elegância se encontram
                 em cada criação.
             </p>
+
         </div>
+
     </header>
 
 
-    <!-- INTRODUÇÃO -->
+    <!-- =========================
+         INTRODUÇÃO
+    ========================= -->
+
     <section class="intro">
+
         <h2>Les Grandes Créations</h2>
 
         <div class="gold-line"></div>
@@ -281,152 +330,227 @@
             Conheça quatro clássicos que se tornaram símbolos da alta
             confeitaria francesa.
         </p>
+
     </section>
 
 
-    <!-- COLEÇÃO -->
+    <!-- =========================
+         COLEÇÃO
+    ========================= -->
+
     <section class="collection">
 
         <div class="desserts">
 
-            <!-- CANELÉ -->
+
+            <!-- =====================
+                 CANELÉ
+            ====================== -->
+
             <article class="card">
 
                 <div class="card-image">
-    <imgCanellé de Bordeaux
- <img src="./img/canelle.jpeg"
-    alt="Canellé de Bordeaux">
+
+                    <!--
+                        IMPORTANTE:
+                        coloque canelle.jpeg dentro da pasta "img"
+                    -->
+
+                    <img
+                        src="./img/canelle.jpeg"
+                        alt="Canelé de Bordeaux"
+                    >
+
                 </div>
 
                 <div class="card-content">
 
-                    <span class="number">01 — BORDEAUX</span>
+                    <span class="number">
+                        01 — BORDEAUX
+                    </span>
 
-                    <h3>Canellé de Bordeaux</h3>
+                    <h3>
+                        Canelé de Bordeaux
+                    </h3>
 
                     <p>
-                        Pequeno doce tradicional de Bordeaux, conhecido
-                        por sua casca caramelizada e interior macio,
-                        aromatizado com baunilha e rum.
+                        Pequeno doce tradicional de Bordeaux,
+                        conhecido por sua casca caramelizada
+                        e interior macio, aromatizado com
+                        baunilha e rum.
                     </p>
 
                     <div class="meaning">
+
                         <strong>Representa:</strong>
+
                         tradição regional, simplicidade refinada
                         e a arte de transformar poucos ingredientes
                         em uma experiência sofisticada.
+
                     </div>
 
                 </div>
+
             </article>
 
 
-            <!-- OPERA -->
+            <!-- =====================
+                 OPÉRA
+            ====================== -->
+
             <article class="card">
 
                 <div class="card-image">
+
                     <img
                         src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=900&q=85"
-                        alt="Gâteau Opéra">
+                        alt="Gâteau Opéra"
+                    >
+
                 </div>
 
                 <div class="card-content">
 
-                    <span class="number">02 — PARIS</span>
+                    <span class="number">
+                        02 — PARIS
+                    </span>
 
-                    <h3>Gâteau Opéra</h3>
+                    <h3>
+                        Gâteau Opéra
+                    </h3>
 
                     <p>
-                        Um elegante entremets formado por camadas de
-                        biscuit Joconde, café, creme de manteiga,
+                        Um elegante entremets formado por camadas
+                        de biscuit Joconde, café, creme de manteiga,
                         chocolate e uma fina cobertura.
                     </p>
 
                     <div class="meaning">
+
                         <strong>Representa:</strong>
+
                         precisão, equilíbrio e sofisticação,
                         combinando os sabores intensos de café
                         e chocolate em camadas harmoniosas.
+
                     </div>
 
                 </div>
+
             </article>
 
 
-            <!-- SAINT HONORE -->
+            <!-- =====================
+                 SAINT-HONORÉ
+            ====================== -->
+
             <article class="card">
 
                 <div class="card-image">
+
                     <img
-                        src="https://www.google.com/imgres?q=saint%20honore&imgurl=https%3A%2F%2Fblogger.googleusercontent.com%2Fimg%2Fb%2FR29vZ2xl%2FAVvXsEhzthT7WrKQ139KGZJC5se6hUaD3dMQ3yKSTZN71m9bypeTecCCxCFnIZz2tkC2G0JKbuXsyeLHfPE4HTFf2k9cql3umF0tjTuV9kxJvRHcsHUC-R_YwLEnrzcOk2wGbVy_vmt5-GvAjaA%2Fs1600%2Fsthonore2.png&imgrefurl=http%3A%2F%2Facozinhacoletiva.blogspot.com%2F2015%2F12%2Fgateau-saint-honore.html&docid=juNeHCStbnibKM&tbnid=z-YNMQ9rZG6o0M&vet=12ahUKEwix3cTv4vWWAxXbELkGHUjtCEQQnPAOegQINBAA..i&w=1033&h=1500&hcb=2&ved=2ahUKEwix3cTv4vWWAxXbELkGHUjtCEQQnPAOegQINBAA"
-                        alt="Saint-Honoré">
+                        src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=85"
+                        alt="Saint-Honoré"
+                    >
+
                 </div>
 
                 <div class="card-content">
 
-                    <span class="number">03 — PARIS</span>
+                    <span class="number">
+                        03 — PARIS
+                    </span>
 
-                    <h3>Saint-Honoré</h3>
+                    <h3>
+                        Saint-Honoré
+                    </h3>
 
                     <p>
-                        Uma criação clássica composta por uma base de
-                        massa, pequenos choux caramelizados e creme
-                        Chiboust ou chantilly.
+                        Uma criação clássica composta por uma base
+                        de massa, pequenos choux caramelizados
+                        e creme Chiboust ou chantilly.
                     </p>
 
                     <div class="meaning">
+
                         <strong>Representa:</strong>
-                        a elegância da pâtisserie parisiense e a
-                        combinação entre técnica, textura e apresentação.
+
+                        a elegância da pâtisserie parisiense
+                        e a combinação entre técnica, textura
+                        e apresentação.
+
                     </div>
 
                 </div>
+
             </article>
 
 
-            <!-- TARTE -->
+            <!-- =====================
+                 TARTE AUX FRAISES
+            ====================== -->
+
             <article class="card">
 
                 <div class="card-image">
+
                     <img
-                        src="https://www.cookomix.com/recettes/tarte-fraises-sans-cuisson-thermomix/"
-                        alt="Tarte aux Fraises et Framboises">
+                        src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=900&q=85"
+                        alt="Tarte aux Fraises"
+                    >
+
                 </div>
 
                 <div class="card-content">
 
-                    <span class="number">04 — FRAISES</span>
+                    <span class="number">
+                        04 — FRAISES
+                    </span>
 
-                    <h3>Tarte aux Fraises</h3>
+                    <h3>
+                        Tarte aux Fraises
+                    </h3>
 
                     <p>
-                        Uma delicada torta francesa que combina massa
-                        sablée, creme pâtissière e frutas vermelhas,
-                        especialmente morangos e framboesas.
+                        Uma delicada torta francesa que combina
+                        massa sablée, creme pâtissière e frutas
+                        vermelhas, especialmente morangos
+                        e framboesas.
                     </p>
 
                     <div class="meaning">
+
                         <strong>Representa:</strong>
+
                         frescor, delicadeza e a valorização dos
-                        ingredientes naturais através de uma apresentação
-                        clássica e elegante.
+                        ingredientes naturais através de uma
+                        apresentação clássica e elegante.
+
                     </div>
 
                 </div>
+
             </article>
 
         </div>
+
     </section>
 
 
-    <!-- HERANÇA -->
+    <!-- =========================
+         HERANÇA
+    ========================= -->
+
     <section class="heritage">
 
-        <h2>L'Héritage Français</h2>
+        <h2>
+            L'Héritage Français
+        </h2>
 
         <p>
             Na Pâtisserie Royale, cada doce conta uma história.
-            Do pequeno Canellé de Bordeaux às sofisticadas camadas
+            Do pequeno Canelé de Bordeaux às sofisticadas camadas
             do Gâteau Opéra, a confeitaria francesa transforma
             técnica e tradição em verdadeiras obras de arte.
         </p>
@@ -434,9 +558,16 @@
     </section>
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         RODAPÉ
+    ========================= -->
+
     <footer>
-        PÂTISSERIE ROYALE · L'ART DE LA HAUTE PÂTISSERIE
+
+        PÂTISSERIE ROYALE
+        ·
+        L'ART DE LA HAUTE PÂTISSERIE
+
     </footer>
 
 </body>
